@@ -15,7 +15,7 @@ public class ProductCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id;
-    private String category_name;
+    private CategoryName category_name;
     @ManyToOne
     @JsonBackReference
     private ProductBasicDetails product_id;
@@ -28,11 +28,11 @@ public class ProductCategory {
         this.id = id;
     }
 
-    public String getCategory_name() {
+    public CategoryName getCategory_name() {
         return category_name;
     }
 
-    public void setCategory_name(String category_name) {
+    public void setCategory_name(CategoryName category_name) {
         this.category_name = category_name;
     }
 
