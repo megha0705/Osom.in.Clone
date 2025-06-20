@@ -104,7 +104,7 @@ public class ProductManagement {
 
    //add product specification
     @PostMapping("/add-Specification")
-    public String addProductSpecification(@RequestParam Double product_size
+    public String addProductSpecification(@RequestParam List<Double> product_size
                                          , @RequestParam String color ,
                                           @RequestParam String material_Used
                                           ,@RequestParam int product_id){
@@ -149,5 +149,9 @@ public class ProductManagement {
         return "product specification  has been updated succesfully";
     }
 
-
+    @PostMapping("/addCategory")
+    public String addProductCategory(@RequestParam int category_name ,@RequestParam int product_id){
+        s.addCategory(category_name, product_id);
+        return "product category have been added successfully";
+    }
 }
