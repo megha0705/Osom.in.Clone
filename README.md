@@ -53,36 +53,81 @@ To set up the application locally, you need to run **both** frontend and backend
 
 ---
 
-### 1️⃣ Clone the repository
+📥 Clone the Repository
 
-```bash
+
 git clone https://github.com/megha0705/Osom.in.Clone
-cd osom.in_clone 
+cd osom.in_clone
 
-### 2️⃣ Set up and run the Backend
-✅ Add the following dependencies to your pom.xml
-
-<!-- Cloudinary -->
+🔧 Backend Setup
+1. Add Dependencies to pom.xml
+   
+<!-- Cloudinary for image management -->
 <dependency>
     <groupId>com.cloudinary</groupId>
     <artifactId>cloudinary-http44</artifactId>
     <version>1.33.0</version>
 </dependency>
 
-<!-- Stripe -->
+<!-- Stripe for payments -->
 <dependency>
     <groupId>com.stripe</groupId>
     <artifactId>stripe-java</artifactId>
     <version>24.7.0</version>  
 </dependency>
 
-<!-- MySQL -->
+<!-- MySQL Connector -->
 <dependency>
     <groupId>com.mysql</groupId>
     <artifactId>mysql-connector-j</artifactId>
     <scope>runtime</scope>
 </dependency>
 
+2. Configure application.properties
+   
+
+# Database Configuration
+spring.datasource.url=jdbc:mysql://<your-mysql-url>/<database>
+spring.datasource.username=<username>
+spring.datasource.password=<password>
+
+# Cloudinary Configuration
+cloudinary.api-key=<your-api-key>
+cloudinary.cloud-name=<your-cloud-name>
+cloudinary.api-secret=<your-secret-key>
+
+# Stripe Configuration
+stripe.webhook.secret=<your-stripe-secret-key>
+3. Build and Run the Spring Boot Server
+Option 1: Run directly from IDE
+
+Navigate to src/main/java/com/Osom/demo/
+
+Run OsomApplication.java
+
+Option 2: Use Maven commands
+
+
+./mvnw clean install
+./mvnw spring-boot:run
+
+💻 Frontend Setup
+
+cd frontend
+npm install       # Install dependencies
+npm run dev      # Start development server
+
+The application will be available at:
+👉 http://localhost:3000
+
+🔑 Required Services
+Make sure you have accounts and API keys for:
+
+MySQL Database
+
+Cloudinary (for image storage)
+
+Stripe (for payments)
 
 
 
