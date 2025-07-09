@@ -61,8 +61,9 @@ cd osom.in_clone
 ```
 🔧 Backend Setup
 
-```xml
 1. Add Dependencies to pom.xml
+
+```xml
 xml   
 <!-- Cloudinary for image management -->
 <dependency>
