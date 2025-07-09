@@ -55,15 +55,13 @@ To set up the application locally, you need to run **both** frontend and backend
 
 📥 Clone the Repository
 
-
+```bash
 git clone https://github.com/megha0705/Osom.in.Clone
-
-
 cd osom.in_clone
-
+```
 🔧 Backend Setup
 
-
+```xml
 1. Add Dependencies to pom.xml
 xml   
 <!-- Cloudinary for image management -->
@@ -86,10 +84,10 @@ xml
     <artifactId>mysql-connector-j</artifactId>
     <scope>runtime</scope>
 </dependency>
-
+```
 2. Configure application.properties
    
-properties
+```properties
 # Database Configuration
 spring.datasource.url=jdbc:mysql://<your-mysql-url>/<database>
 spring.datasource.username=<username>
@@ -102,7 +100,9 @@ cloudinary.api-secret=<your-secret-key>
 
 # Stripe Configuration
 stripe.webhook.secret=<your-stripe-secret-key>
+```
 3. Build and Run the Spring Boot Server
+   
 Option 1: Run directly from IDE
 
 Navigate to src/main/java/com/Osom/demo/
@@ -111,16 +111,16 @@ Run OsomApplication.java
 
 Option 2: Use Maven commands
 
-
+```bash
 ./mvnw clean install
 ./mvnw spring-boot:run
-
+```
 💻 Frontend Setup
-
+```bash
 cd frontend
 npm install       # Install dependencies
 npm run dev      # Start development server
-
+```
 The application will be available at:
 👉 http://localhost:3000
 
