@@ -118,7 +118,7 @@ Option 2: Use Maven commands
 ```
 💻 Frontend Setup
 ```bash
-cd frontend
+cd osom.in_clone/osom-frontend
 npm install       # Install dependencies
 npm run dev      # Start development server
 ```
