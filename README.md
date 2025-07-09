@@ -47,72 +47,42 @@ A production-style e-commerce platform replicating the user experience of OSOM, 
 
 
 ---
-
 ## ⚙️ Running Locally
 
-To set up the application locally, you need to run both frontend and backend services.
+To set up the application locally, you need to run **both** frontend and backend services.
+
+---
 
 ### 1️⃣ Clone the repository
 
+```bash
 git clone https://github.com/megha0705/Osom.in.Clone
-cd osom.in_clone
+cd osom.in_clone 
 
-### 2️⃣ Set up and run the backend
-**Add dependency in pom.xml file**
+### 2️⃣ Set up and run the Backend
+✅ Add the following dependencies to your pom.xml
 
-	<dependency>
-			<groupId>com.cloudinary</groupId>
-			<artifactId>cloudinary-http44</artifactId>
-			<version>1.33.0</version>
-		</dependency>
+<!-- Cloudinary -->
+<dependency>
+    <groupId>com.cloudinary</groupId>
+    <artifactId>cloudinary-http44</artifactId>
+    <version>1.33.0</version>
+</dependency>
 
+<!-- Stripe -->
+<dependency>
+    <groupId>com.stripe</groupId>
+    <artifactId>stripe-java</artifactId>
+    <version>24.7.0</version>  
+</dependency>
 
-		<dependency>
-			<groupId>com.stripe</groupId>
-			<artifactId>stripe-java</artifactId>
-			<version>24.7.0</version>  
-		</dependency>
+<!-- MySQL -->
+<dependency>
+    <groupId>com.mysql</groupId>
+    <artifactId>mysql-connector-j</artifactId>
+    <scope>runtime</scope>
+</dependency>
 
-
-  <dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-<!-- Check for the latest version -->
-
-**Configure your application.properties with your MySQL connection details and API keys**
-
-spring.datasource.url=jdbc:mysql://<your-mysql-url>/<database>
-spring.datasource.username=<username>
-spring.datasource.password=<password>
-
-cloudinary.api-key =<yourapikey>
-cloudinary.cloud-name = <yourcloudname>
-cloudinary.api-secret = <yoursecretkey>
-
-stripe.webhook.secret = <stripespikey>
-
-**Build and run springboot server**
-
-cd src/main/java/com/Osom/demo/
-Run OsomApplication.java file
-**Or**
-./mvnw clean install
-./mvnw spring-boot:run
-
-## 3️⃣ Install and run the Frontend
-
-cd ../frontend
-
-**Install dependencies**
-
-npm install
-
-**Start the development server**
-
-npm run dev
-Visit http://localhost:3000 in your browser.
 
 
 
