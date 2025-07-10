@@ -123,16 +123,18 @@ npm install       # Install dependencies
 npm run dev      # Start development server
 ```
 The application will be available at:
+
 👉 http://localhost:3000
 
 🔑 Required Services
+
 Make sure you have accounts and API keys for:
 
-MySQL Database
+1. MySQL Database
 
-Cloudinary (for image storage)
+2. Cloudinary (for image storage)
 
-Stripe (for payments)
+3. Stripe (for payments)
 
 
 
